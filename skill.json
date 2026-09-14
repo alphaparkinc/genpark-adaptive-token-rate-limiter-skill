@@ -1,0 +1,34 @@
+{
+  "name": "genpark-adaptive-token-rate-limiter-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Adaptive token bucket concurrency rate limiter and backoff scheduler preventing API rate-limit exceptions across distributed agent swarms.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "rate-limiting",
+  "tags": [
+    "rate-limiter",
+    "token-bucket",
+    "backoff",
+    "concurrency-control",
+    "gateway"
+  ],
+  "inputs": {
+    "requested_tokens": {
+      "type": "integer",
+      "default": 2400
+    }
+  },
+  "outputs": {
+    "verdict": {
+      "type": "string"
+    },
+    "remaining_tokens_budget": {
+      "type": "number"
+    },
+    "wait_backoff_ms": {
+      "type": "integer"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
